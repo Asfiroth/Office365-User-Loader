@@ -1,0 +1,9 @@
+﻿<Window 
+    x:Class="SplashDemo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Main window" Height="332" Width="539" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Margin="39,59,21,102" Name="label1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">Application window</Label>
+    </Grid>
+</Window>
