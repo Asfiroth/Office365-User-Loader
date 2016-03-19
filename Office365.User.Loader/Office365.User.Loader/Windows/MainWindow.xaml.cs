@@ -23,6 +23,12 @@ namespace Office365.User.Loader.Windows
         public MainWindow()
         {
             InitializeComponent();
+            this.Loaded += MainWindowLoaded;
+        }
+
+        private void MainWindowLoaded(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

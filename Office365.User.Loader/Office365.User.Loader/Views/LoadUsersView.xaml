@@ -4,11 +4,80 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Office365.User.Loader.Views"
+      xmlns:toolkit="clr-namespace:Xceed;assembly=Xceed.Wpf.Toolkit"
+      xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="700"
-      Title="LoadUsersView">
-
+      d:DesignHeight="700" d:DesignWidth="900"
+      Title="LoadUsersView"
+      DataContext="{Binding LoadPageViewModel, Source={StaticResource Locator}}">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.05*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.9*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" Margin="0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.15*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBox controls:TextBoxHelper.Watermark="Seleccione documento"
+                        Grid.Row="1"
+                        IsEnabled="False"
+                        FontSize="20"
+                        Text="{Binding FileName}"
+                        Style="{StaticResource BlockedTextBox}"/>
+                <Button Grid.Column="1" Grid.Row="1" Command="{Binding SelectFileCommand}">
+                    <Rectangle Width="20" Height="20">
+                        <Rectangle.Fill>
+                            <VisualBrush Visual="{StaticResource appbar_upload}"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+
+                </Button>
+            </Grid>
+            <Grid Grid.Column="2" Margin="0,20" Visibility="{Binding FileName, Converter={StaticResource StringToVsibilityConverter}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.2*"/>
+                </Grid.RowDefinitions>
+                <CheckBox Grid.Column="1" Grid.Row="1" Content="Claves Aleatorias" FontSize="20"/>
+                <Button Grid.Column="1" Grid.Row="3" Content="Procesar" FontSize="20"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <DataGrid Margin="20,0" VerticalScrollBarVisibility="Auto" ItemsSource="{Binding OfficeUsers}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="*" Header="nombre" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Width="*" Header="apellido" Binding="{Binding LastName}"/>
+                    <DataGridTextColumn Width="*" Header="nombre para mostrar" Binding="{Binding ShowOffName}"/>
+                    <DataGridTextColumn Width="*" Header="nombre de usuario" Binding="{Binding UserName}"/>
+                    <DataGridTextColumn Width="*" Header="password" Binding="{Binding Password}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Button Grid.Row="2" Margin="200,10" Content="iniciar carga" FontSize="20"/>
     </Grid>
 </Page>

@@ -26,13 +26,14 @@
                    FontSize="24"
                    VerticalAlignment="Center"
                    TextWrapping="Wrap"
+                   Style="{StaticResource InitTextBlock}"
                    Margin="0,40" />
         <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="Loader" HorizontalAlignment="Center" Foreground="White"/>
+            <TextBlock x:Name="Loader" HorizontalAlignment="Center" FontSize="15" Style="{StaticResource InitTextBlock}" Foreground="White"/>
         </Grid>
     </Grid>
 </Window>

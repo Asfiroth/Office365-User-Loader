@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\App.xaml
-5411915600
+7-1665548364
 
-151391220746
-69-1551352059
-Resources\Styles.xaml;UserControls\LoginControl.xaml;Views\LoadUsersView.xaml;Windows\MainWindow.xaml;Windows\StartWindow.xaml;
+21822940382
+76-1927345146
+Resources\Icons.xaml;Resources\Styles.xaml;UserControls\LoginControl.xaml;Views\LoadUsersView.xaml;Views\ResultsView.xaml;Windows\MainWindow.xaml;Windows\StartWindow.xaml;
 
-False
+True
 

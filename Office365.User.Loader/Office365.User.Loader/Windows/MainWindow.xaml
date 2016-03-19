@@ -5,9 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:Office365.User.Loader.Windows"
+        xmlns:views="clr-namespace:Office365.User.Loader.Views"
         mc:Ignorable="d"
-        Title="Office 365 Users - Batch Loader" Height="500" Width="700">
+        Icon="/Images/logo.png"
+        WindowStartupLocation="CenterScreen"
+        Title="Office 365 Users - Batch Loader" Height="700" Width="900">
     <Grid>
-        
+        <DockPanel>
+            <Frame x:Name="MainFrame" Source="/Views/LoadUsersView.xaml"></Frame>
+        </DockPanel>
     </Grid>
 </controls:MetroWindow>
