@@ -4,7 +4,6 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Office365.User.Loader.Views"
-      xmlns:toolkit="clr-namespace:Xceed;assembly=Xceed.Wpf.Toolkit"
       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="900"
@@ -63,12 +62,12 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="0.2*"/>
                 </Grid.RowDefinitions>
-                <CheckBox Grid.Column="1" Grid.Row="1" Content="Claves Aleatorias" FontSize="20"/>
-                <Button Grid.Column="1" Grid.Row="3" Content="Procesar" FontSize="20"/>
+                <CheckBox Grid.Column="1" Grid.Row="1" Content="Claves Aleatorias" FontSize="20" IsChecked="{Binding RandomPassword, Mode=TwoWay}"/>
+                <Button Grid.Column="1" Grid.Row="3" Content="Procesar" FontSize="20" Command="{Binding ProcessCommand}"/>
             </Grid>
         </Grid>
         <Grid Grid.Row="1">
-            <DataGrid Margin="20,0" VerticalScrollBarVisibility="Auto" ItemsSource="{Binding OfficeUsers}">
+            <DataGrid Margin="20,0" VerticalScrollBarVisibility="Auto" ItemsSource="{Binding OfficeUsers}" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="*" Header="nombre" Binding="{Binding Name}"/>
                     <DataGridTextColumn Width="*" Header="apellido" Binding="{Binding LastName}"/>
@@ -78,6 +77,6 @@
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        <Button Grid.Row="2" Margin="200,10" Content="iniciar carga" FontSize="20"/>
+        <Button Grid.Row="2" Margin="200,10" Content="iniciar carga" FontSize="20" Command="{Binding UploadCommand}"/>
     </Grid>
 </Page>

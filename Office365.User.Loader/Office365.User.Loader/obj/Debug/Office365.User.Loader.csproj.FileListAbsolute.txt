@@ -58,3 +58,7 @@ C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Offi
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Office365.User.Loader.exe
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Office365.User.Loader.pdb
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Office365.User.Loader.csprojResolveAssemblyReference.cache
+C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\bin\Debug\Syncfusion.Compression.Base.dll
+C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\bin\Debug\Syncfusion.XlsIO.ClientProfile.dll
+C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\bin\Debug\Syncfusion.Compression.Base.xml
+C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\bin\Debug\Syncfusion.XlsIO.ClientProfile.xml
