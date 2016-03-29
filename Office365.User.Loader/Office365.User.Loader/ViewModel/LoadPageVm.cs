@@ -271,6 +271,8 @@ namespace Office365.User.Loader.ViewModel
                             userCommand.Parameters.Add((new CommandParameter("UsageLocation", officeUser.UsageLocation)));
                             userCommand.Parameters.Add((new CommandParameter("ForceChangePassword", _forceChangePassword)));
 
+                            pipe.Commands.Add(userCommand);
+                            pipe.Invoke();
                             worker.ReportProgress(count, $"Cargados {count} de {OfficeUsers.Count}...");
                         }
                     }

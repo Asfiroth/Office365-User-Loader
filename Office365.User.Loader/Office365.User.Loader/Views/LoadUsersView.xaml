@@ -113,7 +113,7 @@
                 </Grid>
             </Border>
         </ucontrol:ModalControl>
-        <!--<ucontrol:LoaderControl Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Row="0" Grid.RowSpan="3" ></ucontrol:LoaderControl>-->
+        <ucontrol:LoaderControl Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Row="0" Grid.RowSpan="3" ></ucontrol:LoaderControl>
     </Grid>
 
 </Page>
