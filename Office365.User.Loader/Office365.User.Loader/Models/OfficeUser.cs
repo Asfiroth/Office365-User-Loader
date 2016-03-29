@@ -14,5 +14,14 @@
         public string Country { get; set; }
         public string Password { get; set; }
         public string License { get; set; }
+        public string UsageLocation { get; set; }
+        public OfficeUserStatus Status { get; set; }
+    }
+
+    public enum OfficeUserStatus
+    {
+        NotLoaded = 0,
+        Loading = 1,
+        Loaded = 2
     }
 }

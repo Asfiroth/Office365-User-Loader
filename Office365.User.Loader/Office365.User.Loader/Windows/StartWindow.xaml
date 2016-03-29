@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Office365.User.Loader.Windows"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
         Title="StartWindow" Height="300" Width="500"
         Icon="/Images/logo.png"
@@ -33,7 +34,8 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="Loader" HorizontalAlignment="Center" FontSize="15" Style="{StaticResource InitTextBlock}" Foreground="White"/>
+            <controls:MetroProgressBar Grid.Row="1" IsIndeterminate="True" Foreground="AntiqueWhite"/>
+            <TextBlock x:Name="Loader" Grid.Row="0" HorizontalAlignment="Center" FontSize="15" Style="{StaticResource InitTextBlock}" Foreground="White"/>
         </Grid>
     </Grid>
 </Window>

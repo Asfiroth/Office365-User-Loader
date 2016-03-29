@@ -25,17 +25,16 @@ namespace Office365.User.Loader
             var worker = new BackgroundWorker {WorkerReportsProgress = true};
             worker.DoWork += delegate
             {
-                worker.ReportProgress(1, "Verificando conexión a red...");
-                var isNetworkEnabled = NetworkInterface.GetIsNetworkAvailable();
+                worker.ReportProgress(1, "verificando conexión a red...");
                 Thread.Sleep(2000);
-                if (isNetworkEnabled)
+                if (NetworkInterface.GetIsNetworkAvailable())
                 {
-                    worker.ReportProgress(1, "Estableciendo conexión...");
+                    worker.ReportProgress(1, "estableciendo conexión...");
                     Thread.Sleep(2000);
                 }
                 else
                 {
-                    worker.ReportProgress(1, "Usted no cuenta con conexión a red...");
+                    worker.ReportProgress(1, "usted no cuenta con conexión a red...");
                     Thread.Sleep(2000);
                 }
             };
@@ -45,8 +44,7 @@ namespace Office365.User.Loader
             };
             worker.RunWorkerCompleted += (sender, args) =>
             {
-                var isNetworkEnabled = NetworkInterface.GetIsNetworkAvailable();
-                if (isNetworkEnabled)
+                if (NetworkInterface.GetIsNetworkAvailable())
                 {
                     var main = new MainWindow();
                     main.Show();
@@ -54,8 +52,6 @@ namespace Office365.User.Loader
                 splash.Close();
             };
             worker.RunWorkerAsync();
-            
-            
             
             base.OnStartup(e);
             

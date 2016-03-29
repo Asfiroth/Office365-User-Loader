@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Office365.User.Loader.UserControls
+namespace Office365.User.Loader.Controls
 {
     /// <summary>
-    /// Interaction logic for LoginControl.xaml
+    /// Interaction logic for LoaderControl.xaml
     /// </summary>
-    public partial class LoginControl : UserControl
+    public partial class LoaderControl : UserControl
     {
-        public LoginControl()
+        public LoaderControl()
         {
             InitializeComponent();
         }

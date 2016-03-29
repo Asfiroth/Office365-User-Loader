@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Data;
 
 namespace Office365.User.Loader.Converters
 {
-    public class BooleanToVisibilityConverter
+    public class BooleanToVisibilityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {

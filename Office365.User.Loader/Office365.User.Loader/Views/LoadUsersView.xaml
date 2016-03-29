@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Office365.User.Loader.Views"
       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:ucontrol="clr-namespace:Office365.User.Loader.Controls"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="900"
       Title="LoadUsersView"
@@ -60,23 +61,59 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="0.3*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="0.2*"/>
                 </Grid.RowDefinitions>
                 <CheckBox Grid.Column="1" Grid.Row="1" Content="Claves Aleatorias" FontSize="20" IsChecked="{Binding RandomPassword, Mode=TwoWay}"/>
-                <Button Grid.Column="1" Grid.Row="3" Content="Procesar" FontSize="20" Command="{Binding ProcessCommand}"/>
+                <CheckBox Grid.Column="1" Grid.Row="3" Content="Cambio de Contraseña" FontSize="20" IsChecked="{Binding ForceChangePassword, Mode=TwoWay}" />
+                <Button Grid.Column="1" Grid.Row="5" Content="Procesar" FontSize="20" Command="{Binding ProcessCommand}"/>
             </Grid>
         </Grid>
         <Grid Grid.Row="1">
             <DataGrid Margin="20,0" VerticalScrollBarVisibility="Auto" ItemsSource="{Binding OfficeUsers}" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="*" Header="nombre" Binding="{Binding Name}"/>
-                    <DataGridTextColumn Width="*" Header="apellido" Binding="{Binding LastName}"/>
                     <DataGridTextColumn Width="*" Header="nombre para mostrar" Binding="{Binding ShowOffName}"/>
                     <DataGridTextColumn Width="*" Header="nombre de usuario" Binding="{Binding UserName}"/>
                     <DataGridTextColumn Width="*" Header="password" Binding="{Binding Password}"/>
+                    <DataGridTextColumn Width="*" Header="estatus" Binding="{Binding Status, Converter={StaticResource EnumToStringConverter}}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
         <Button Grid.Row="2" Margin="200,10" Content="iniciar carga" FontSize="20" Command="{Binding UploadCommand}"/>
+        <ucontrol:ModalControl Grid.Row="0" IsActive="{Binding IsActive}" Grid.RowSpan="4">
+            <Border Background="WhiteSmoke">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="10"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Tenant Admin: "/>
+                        <TextBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Text="{Binding TenantAdminName}" />
+                        <TextBlock Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Password: "/>
+                        <PasswordBox x:Name="TxtPasswordBox" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" />
+                        <Button Grid.Column="0" Grid.Row="5" Content="Aceptar" Margin="5" Command="{Binding AcceptCommand}" CommandParameter="{Binding ElementName=TxtPasswordBox}"/>
+                        <Button Grid.Column="1" Grid.Row="5" Content="Cancelar" Margin="5" Command="{Binding CancelCommand}"/>
+                    </Grid>
+                </Grid>
+            </Border>
+        </ucontrol:ModalControl>
+        <!--<ucontrol:LoaderControl Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Row="0" Grid.RowSpan="3" ></ucontrol:LoaderControl>-->
     </Grid>
+
 </Page>

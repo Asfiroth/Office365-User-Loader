@@ -37,7 +37,6 @@ C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Offi
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Resources\Icons.baml
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Resources\Styles.baml
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Resources\Icons.g.cs
-C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\UserControls\LoginControl.g.cs
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Views\LoadUsersView.g.cs
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Views\ResultsView.g.cs
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Windows\MainWindow.g.cs
@@ -47,7 +46,6 @@ C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Offi
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Office365.User.Loader_MarkupCompile.cache
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Office365.User.Loader_MarkupCompile.lref
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\App.baml
-C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\UserControls\LoginControl.baml
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Views\LoadUsersView.baml
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Views\ResultsView.baml
 C:\Users\eduar\Documents\GitHub\Office365-User-Loader\Office365.User.Loader\Office365.User.Loader\obj\Debug\Windows\MainWindow.baml
